@@ -53,3 +53,7 @@ join cliente ON contrato_aluguel.id_cliente = cliente.id_cliente
 where cliente.nome = 'Alexandre Zamberlan';
 
 # Mostre os clientes e os escritórios associados no contrato de aluguel.
+select cliente.nome AS Cliente, escritorio.nome AS Escritorio 
+from contrato_aluguel
+join cliente ON contrato_aluguel.id_cliente  = cliente.id_cliente
+join escritorio ON contrato_aluguel.id_escritorio = escritorio.id_escritorio;
